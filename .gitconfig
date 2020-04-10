@@ -1,0 +1,10 @@
+[core]
+editor=vim
+
+[user]
+email=patrick.quigley@thebeansgroup.com
+name=PQ
+
+[github]
+GitlabAPIToken=https://git.thebeansgroup.com
+GitlabPersonAccessToken-janus=wuBtfGtoujzLXf2hax6n

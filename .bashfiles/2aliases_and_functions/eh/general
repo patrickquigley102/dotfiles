@@ -1,0 +1,7 @@
+#
+#\e[0;32m ll \e[0m        | list permission, size etc
+#\e[0;32m lr \e[0m        | list dir structure recursively
+#\e[0;32m foldstop \e[0m  | stop folding at home
+#\e[0;32m foldstart \e[0m | start folding at home
+#\e[0;32m eh \e[0m        | list aliases in matching $1 eh files
+#\e[0;32m refresh \e[0m   | reload ~/.bashrc

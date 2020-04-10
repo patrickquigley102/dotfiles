@@ -17,10 +17,11 @@ alias foldstart='sudo /etc/init.d/FAHClient start'
 
 # List aliases and functions contained in matching files.
 eh() {
-  for FILE in `find $HOME/.bashfiles/2aliases_and_functions -type f | sort -n`
+  for FILE in `find $HOME/.bashfiles/2aliases_and_functions/eh -type f | sort -n`
   do
     if [[ "$FILE" == *"$1"* ]]; then 
-      cat $FILE
+      # Read the file processing ANSI colors, preserving whitspace with sed
+      echo -ne $(cat $FILE | sed  's/$/\\n/' | sed 's/ /\\a /g') 
     fi
   done
 }

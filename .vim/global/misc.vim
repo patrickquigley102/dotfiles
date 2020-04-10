@@ -18,3 +18,6 @@ set shiftwidth=2
 
 " auto indent when hitting enter
 set autoindent
+
+" Vertical line at 80 chars
+set colorcolumn=80

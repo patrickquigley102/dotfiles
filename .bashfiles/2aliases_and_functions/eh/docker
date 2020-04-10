@@ -1,0 +1,6 @@
+#
+#\e[0;32m d \e[0m       | docker 
+#\e[0;32m dc \e[0m      | docker-compose
+#\e[0;32m dclean \e[0m  | Remove dangling images, exited containers etc.
+#\e[0;32m dreset \e[0m  | Reset and container matching $1.
+#\e[0;32m dcexec \e[0m  | exec first container matching $1. If $1 missing, bash into the first container in `./docker-compose.yml`

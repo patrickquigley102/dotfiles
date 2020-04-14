@@ -57,7 +57,7 @@ done
 
 # Check for existance of secrets file.
 # If missing add the file and notify
-secrets=$HOME/.bashfiles/0env/secrets
+secrets=$HOME/.bashfiles/0env/secrets.sh
 if test -f "$secrets"; then
   source $secrets
 else

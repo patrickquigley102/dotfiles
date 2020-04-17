@@ -1,3 +1,4 @@
+# Swap caps lock and esc key.
 xmodmap -e "clear Lock"
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"

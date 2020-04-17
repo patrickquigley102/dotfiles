@@ -1,5 +1,5 @@
 export TBG_GEMS_HOST=https://gem.thebeansgroup.com
 export TBG_GEMS_USER=vincent
-export GIT_REMOTE_ROOT=git@git.thebeansgroup.com
+export SB_GIT_REMOTE_ROOT=git@git.thebeansgroup.com
 export DB_PASSWORD=password
-export SRC_ROOT=$HOME/src/
+export SB_SRC_ROOT=$HOME/src/

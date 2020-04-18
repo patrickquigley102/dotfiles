@@ -50,7 +50,7 @@ fi
 
 # Load env vars, config, aliases and functions. In that order. 
 # Loads all files in alphanumeric order
-for BASHFILE in `find /home/pq/.bashfiles -type f | sort -n`
+for BASHFILE in `find $HOME/.bashfiles/ -type f | sort -n`
 do
   source $BASHFILE
 done
@@ -65,4 +65,3 @@ else
   echo -e ${RED}"Create it and store secret bash variables in it, if you like."${NOCOLOR}
   echo -e ${RED}"For your dark biddings."${NOCOLOR}
 fi
-  

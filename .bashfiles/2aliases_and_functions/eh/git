@@ -12,4 +12,5 @@
 #\e[0;32m gbrn \e[0m        | checkout new
 #\e[0;32m gre \e[0m         | interactive rebase $1 number of commits from HEAD
 #\e[0;32m gbranchwhen \e[0m | List branches in order last updated DESC
+#\e[0;32m gd \e[0m          | git diff
 

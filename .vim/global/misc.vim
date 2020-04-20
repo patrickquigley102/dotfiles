@@ -21,3 +21,6 @@ set autoindent
 
 " Vertical line at 80 chars
 set colorcolumn=80
+
+" Automatically refresh a buffer if the file changes
+set autoread

@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'KeitaNakamura/neodark.vim'
     " Nerd tree file explorer https://github.com/preservim/nerdtree
     Plug 'preservim/nerdtree'
+    " Toggle relative or absolute line number
+    " https://github.com/jeffkreeftmeijer/vim-numbertoggle
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
 
 " Load all files in .vim/global with a .vim suffix.

@@ -24,3 +24,6 @@ set colorcolumn=80
 
 " Automatically refresh a buffer if the file changes
 set autoread
+
+" Keep 5 lines above and below cursor visible for context.
+set scrolloff=4

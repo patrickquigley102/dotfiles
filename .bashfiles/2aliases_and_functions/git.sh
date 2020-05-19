@@ -10,6 +10,7 @@ alias gacp='git add -A && git commit && git push origin HEAD'
 alias gbrn='git checkout -b'
 alias gbr='git checkout'
 alias gd='git diff'
+alias gbranchbyebye='git branch | grep -v "master" | xargs git branch -D'
 
 # Start an interactive rebase with of X number of commits from head.
 gre() {

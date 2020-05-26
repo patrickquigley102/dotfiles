@@ -10,7 +10,7 @@ alias gacp='git add -A && git commit && git push origin HEAD'
 alias gbrn='git checkout -b'
 alias gbr='git checkout'
 alias gd='git diff'
-alias gbranchbyebye='git branch | grep -v "master" | xargs git branch -D'
+alias gbrbyebye='git branch | grep -v "master" | xargs git branch -D'
 
 # Start an interactive rebase with of X number of commits from head.
 gre() {
@@ -18,7 +18,7 @@ gre() {
 }
 
 # List git branches in order of last updated.
-gbranchwhen() {
+gbrwhen() {
   for branch in `git branch | perl -pe s/^..//`; do
   echo -e `git show --pretty=format:"%Cgreen%ci %Cblue %cr%Creset" $branch -- |
     head -n 1`\\t$branch

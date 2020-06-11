@@ -1,0 +1,20 @@
+#
+#\e[0;32m cms \e[0m           | cd ~/src/content/cms
+#\e[0;32m countries \e[0m     | cd ~/src/content/countries
+#\e[0;32m graphql \e[0m       | cd ~/src/apis/graphql-server
+#\e[0;32m offerslegacy \e[0m  | cd ~/src/content/offers-legacy
+#\e[0;32m offers \e[0m        | cd ~/src/content/offers
+#\e[0;32m brands \e[0m        | cd ~/src/content/brands
+#\e[0;32m devservices \e[0m   | cd ~/src/devops/dev-services
+#\e[0;32m connect \e[0m       | cd ~/src/studentbeans/connect
+#\e[0;32m features \e[0m      | cd ~/src/studentbeans/features
+#\e[0;32m id \e[0m            | cd ~/src/studentbeans/id
+#\e[0;32m accounts \e[0m      | cd ~/src/accounts/accounts
+#\e[0;32m publish \e[0m       | cd ~/src/studentbeans/publish
+#\e[0;32m verification \e[0m  | cd ~/src/accounts/verification
+#\e[0;32m discovery \e[0m     | cd ~/src/content/discovery
+#\e[0;32m saved \e[0m         | cd ~/src/personalisation/saved-for-later
+#\e[0;32m syn \e[0m           | cd ~/src/studentbeans/syndication-gateway
+#\e[0;32m media \e[0m         | cd ~/src/content/media
+#\e[0;32m campaigns \e[0m     | cd ~/src/content/campaigns
+

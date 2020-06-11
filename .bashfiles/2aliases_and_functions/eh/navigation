@@ -17,4 +17,5 @@
 #\e[0;32m syn \e[0m           | cd ~/src/studentbeans/syndication-gateway
 #\e[0;32m media \e[0m         | cd ~/src/content/media
 #\e[0;32m campaigns \e[0m     | cd ~/src/content/campaigns
+#\e[0;32m experiments \e[0m   | cd ~/src/personalisation/experiments
 

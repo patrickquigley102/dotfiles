@@ -8,7 +8,6 @@ set number
 set noswapfile
 set nobackup
 
-
 " set tabwith to use spaces
 set expandtab
 " Tab is two spaces. Make Ruby specific eventually.
@@ -27,3 +26,6 @@ set autoread
 
 " Keep 5 lines above and below cursor visible for context.
 set scrolloff=4
+
+" Only syntax highlight up to 200
+:set synmaxcol=200

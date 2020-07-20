@@ -2,6 +2,7 @@
 #\e[0;32m g \e[0m           | git
 #\e[0;32m gs \e[0m          | status
 #\e[0;32m gm \e[0m          | checkout & pull master
+#\e[0;32m gpm \e[0m         | pull master into current branch
 #\e[0;32m ga \e[0m          | add all changed files
 #\e[0;32m gc \e[0m          | commit
 #\e[0;32m gp \e[0m          | push

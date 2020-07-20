@@ -1,6 +1,7 @@
 alias g='git'
 alias gs='git status'
 alias gm='git checkout master && git pull origin master'
+alias gpm='git pull origin master'
 alias ga='git add -A'
 alias gc='git commit'
 alias gp='git push origin HEAD'

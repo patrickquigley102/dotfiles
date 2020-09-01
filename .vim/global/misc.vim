@@ -29,3 +29,6 @@ set scrolloff=4
 
 " Only syntax highlight up to 200
 :set synmaxcol=200
+
+" Enable match it macros (originally for % working with do end blocks in Ruby)
+runtime macros/matchit.vim

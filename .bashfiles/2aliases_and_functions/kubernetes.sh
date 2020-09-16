@@ -1,8 +1,10 @@
 alias k='kubectl'
 
-alias ky='kubectl config use-context production-yellow && kubectl --namespace=production'
-alias kp='kubectl config use-context production-pink && kubectl --namespace=production'
-alias ks='kubectl config use-context staging.k8s.local && kubectl --namespace=staging'
+alias ky='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-yellow && kubectl --namespace=production'
+alias kp='kubectl config use-context
+arn:aws:eks:eu-west-1:593357294110:cluster/production-pink && kubectl
+--namespace=production'
+alias ks='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
 
 # exec into first pod matching $2 in context/namespace $1
 kexec() {

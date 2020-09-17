@@ -16,6 +16,8 @@ call plug#begin('~/.vim/plugged')
     " Toggle relative or absolute line number
     " https://github.com/jeffkreeftmeijer/vim-numbertoggle
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    " A Wiki text file organiser in Vim
+    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Load all files in .vim/global with a .vim suffix.

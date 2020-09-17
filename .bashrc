@@ -55,14 +55,6 @@ do
   source $BASHFILE
 done
 
-# Load sb aliases and functions, if the directory exists.
-if [ -d "$HOME/.sb/dev-cli/lib/aliases_and_functions/" ]; then
-  for BASHFILE in `find $HOME/.sb/dev-cli/lib/aliases_and_functions/ -type f`
-  do
-    source $BASHFILE
-  done
-fi
-
 # Check for existance of secrets file.
 # If missing add the file and notify
 secrets=$HOME/.bashfiles/0env/secrets.sh

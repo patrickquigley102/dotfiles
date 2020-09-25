@@ -2,7 +2,7 @@
 set nocompatible
 " Turn on local commands per file based on type. Required for VimWiki
 filetype plugin on
-" Enable syntax highlighting
+" Enable syntax highlighting. Required for VimWiki
 syntax on
 
 " Set file location, syntax and extension

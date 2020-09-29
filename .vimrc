@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
     " A Wiki text file organiser in Vim
     Plug 'vimwiki/vimwiki'
+    " Fuzzy file finder
+    Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Load all files in .vim/global with a .vim suffix.

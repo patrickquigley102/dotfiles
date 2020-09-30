@@ -18,4 +18,6 @@
 #\e[0;32m media \e[0m         | cd ~/src/content/media
 #\e[0;32m campaigns \e[0m     | cd ~/src/content/campaigns
 #\e[0;32m experiments \e[0m   | cd ~/src/personalisation/experiments
+#\e[0;32m cli \e[0m   | cd ~/.sb/dev-cli
+#\e[0;32m shib \e[0m      | cd ~/src/accounts/shibboleth-sp
 

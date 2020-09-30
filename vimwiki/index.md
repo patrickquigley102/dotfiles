@@ -3,6 +3,7 @@
 ## Learnings
 
 - [Statistics](Statistics)
+- [Web Development](Web Development)
 
 ## Tools
 

@@ -1,24 +1,23 @@
-alias k='kubectl'
+alias kyp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-yellow && kubectl --namespace=production'
+alias kpp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-pink && kubectl --namespace=production'
+alias kss='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
+alias ksa='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=accounts'
 
-alias ky='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-yellow && kubectl --namespace=production'
-alias kp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-pink && kubectl --namespace=production'
-alias ks='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
-
-# exec into first pod matching $2 in context/namespace $1
+# exec into first pod matching $3 in context $1 and namespace $2
 kexec() {
   if [ "$1" == "y" ]
   then
-    ky exec -it $(kubectl --namespace=production get pods | grep "$2" -m 1 | awk '{print $1}') /bin/bash
+    ky exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
     return
   fi
   if [ "$1" == "p" ]
   then
-    kp exec -it $(kubectl --namespace=production get pods | grep "$2" -m 1 | awk '{print $1}') /bin/bash
+    kp exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
     return
   fi
   if [ "$1" == "s" ]
   then
-    ks exec -it $(kubectl --namespace=staging get pods | grep "$2" -m 1 | awk '{print $1}') /bin/bash
+    ks exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
     return
   fi
   echo -e ${RED}"No context alias found for $1"${NOCOLOR}

@@ -17,8 +17,13 @@ kexec() {
   fi
   if [ "$1" == "s" ]
   then
-    ks exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
-    return
+    if [ "$2" == "staging" ]
+    then
+      kss exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
+      return
+    else
+      echo "$2 not a supported namespace yet"
+    fi
   fi
   echo -e ${RED}"No context alias found for $1"${NOCOLOR}
 }

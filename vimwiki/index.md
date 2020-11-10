@@ -10,6 +10,7 @@
 - [Ruby](Ruby)
 - [Vim](Vim)
 - [Docker](Docker)
+- [Kubernetes and Helm](Kubernetes)
 
 ## Student Beans Specific
 

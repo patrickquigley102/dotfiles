@@ -1,26 +1,33 @@
-alias kyp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-yellow && kubectl --namespace=production'
-alias kpp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-pink && kubectl --namespace=production'
-alias kss='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
-alias ksa='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=accounts'
+alias ksilver='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-silver && kubectl'
+alias kgold='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-gold && kubectl'
 
-# exec into first pod matching $3 in context $1 and namespace $2
+alias kstaging='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl'
+alias kstagings='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
+alias kstaginga='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=accounts'
+
+# exec into first pod match $3 in the namespace $2 in the $1 cluster
 kexec() {
-  if [ "$1" == "y" ]
-  then
-    ky exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
-    return
+  if [ "$1" == "staging" ]; then
+    kstaging --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+  elif [ "$1" == "gold" ]; then
+    kgold --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+  elif [ "$1" == "silver" ]; then
+    ksilver --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
   fi
-  if [ "$1" == "p" ]
-  then
-    kp exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
-    return
-  fi
-  if [ "$1" == "s" ]
-  then
-    ks exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
-    return
-  fi
-  echo -e ${RED}"No context alias found for $1"${NOCOLOR}
+}
+
+# show logs for first pod match $2 in the namespace $1 in the staging cluster
+klogs() {
+  ks --namespace="$1" logs $(find_first_matching_kubectl_pod $1 $2) -f 
+}
+
+# describe the first pod match $2 in the namespace $1 in the staging cluster
+kdesc() {
+  ks --namespace="$1" describe pod $(find_first_matching_kubectl_pod $1 $2)
+}
+
+find_first_matching_kubectl_pod() {
+  kubectl --namespace="$1" get pods | grep "$2" -m 1 | awk '{print $1}'
 }
 
 # Clear TBG production memcached

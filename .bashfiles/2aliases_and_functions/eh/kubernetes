@@ -1,7 +1,9 @@
 #
-#\e[0;32m kyp \e[0m   | production yellow context and production namespace 
-#\e[0;32m kpp \e[0m    | production pink context and production namespace 
-#\e[0;32m kss \e[0m    | staging context and staging namespace
-#\e[0;32m ksa \e[0m    | staging context and accounts namespace
-#\e[0;32m kexec \e[0m | exec into first pod matching $3 in context $1 and namespace $2
+#\e[0;32m kgold \e[0m        | gold production context
+#\e[0;32m ksilver \e[0m      | silver production context
+#\e[0;32m kstaging \e[0m     | staging context
+#\e[0;32m kstagings \e[0m    | staging context staging namespace
+#\e[0;32m ksstaginga \e[0m   | staging context accounts namespace
+#\e[0;32m kexec \e[0m        | exec into first pod matching $3 in namespace $2 in the $1 cluster
+#\e[0;32m klogs \e[0m        | logs of first pod matching $2 in namespace $1 in the staging cluster
 

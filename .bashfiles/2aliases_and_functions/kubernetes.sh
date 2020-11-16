@@ -1,21 +1,21 @@
-alias kyp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-yellow && kubectl --namespace=production'
-alias kpp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-pink && kubectl --namespace=production'
+alias ksp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-silver && kubectl --namespace=production'
+alias kgp='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/production-gold && kubectl --namespace=production'
 alias kss='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
 alias ksa='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=accounts'
 
 # exec into first pod matching $3 in context $1 and namespace $2
 kexec() {
-  if [ "$1" == "y" ]
+  if [ "$1" == "gold" ]
   then
-    ky exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
+    kgp exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
     return
   fi
-  if [ "$1" == "p" ]
+  if [ "$1" == "silver" ]
   then
-    kp exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
+    ksp exec -it $(kubectl --namespace="$2" get pods | grep "$3" -m 1 | awk '{print $1}') /bin/bash
     return
   fi
-  if [ "$1" == "s" ]
+  if [ "$1" == "staging" ]
   then
     if [ "$2" == "staging" ]
     then

@@ -11,6 +11,7 @@
 - [Vim](Vim)
 - [Docker](Docker)
 - [Kubernetes and Helm](Kubernetes)
+- [MySQL](MySQL)
 
 ## Student Beans Specific
 

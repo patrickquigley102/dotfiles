@@ -1,5 +1,14 @@
 # MySQL
 
+## Viewing a Server's Logs
+
+When in a client tool, do the following.
+
+`SET GLOBAL log_output = 'TABLE';`
+`SET GLOBAL general_log = 'ON';`
+Do the work you wish to inspect.
+`SELECT * FROM mysql.general_log;`
+
 ## Cloning Data using mysqldump
 
 First, pull the data down in to a local file.

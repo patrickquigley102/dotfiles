@@ -1,5 +1,6 @@
 [global_config]
   focus = system
+  window_state = maximise
   title_inactive_bg_color = "#888a85"
   inactive_color_offset = 0.8333333333333334
   suppress_multiple_term_dialog = True
@@ -21,11 +22,45 @@
     use_system_font = False
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
-      type = Terminal
-    [[[window0]]]
-      parent = ""
+    [[[child0]]]
       type = Window
+      parent = ""
+      order = 0
+      position = 72:27
+      maximised = True
+      fullscreen = False
+      size = 2488, 1376
+      title = /bin/bash
+      last_active_window = True
+    [[[child1]]]
+      type = Notebook
+      parent = child0
+      order = 0
+      labels = None, None
+      last_active_term = 1169926b-789c-471f-9a8e-127c4414099c, 6a3befc9-cd86-4078-89ea-e9011a220db2
+      active_page = 0
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 1169926b-789c-471f-9a8e-127c4414099c
+    [[[child3]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 666
+      ratio = 0.5
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 6a3befc9-cd86-4078-89ea-e9011a220db2
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = f4daa89c-99fb-4334-bc2f-b4cac69136f4
 [plugins]
-

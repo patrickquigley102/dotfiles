@@ -5,12 +5,15 @@
   inactive_color_offset = 0.8333333333333334
   suppress_multiple_term_dialog = True
 [keybindings]
-  go_up = <Alt>k
-  go_down = <Alt>j
-  go_left = <Alt>h
-  go_right = <Alt>l
+  go_up = <Alt>e
+  go_down = <Alt>n
+  go_left = <Alt>m
+  go_right = <Alt>i
+  split_horiz = <Alt>g
+  split_vert = <Alt>d
   move_tab_left = grave
   next_tab = <Alt>t
+  broadcast_group = <Alt>w
   layout_launcher = None
 [profiles]
   [[default]]

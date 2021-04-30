@@ -1,0 +1,31 @@
+[global_config]
+  focus = system
+  title_inactive_bg_color = "#888a85"
+  inactive_color_offset = 0.8333333333333334
+  suppress_multiple_term_dialog = True
+[keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  move_tab_left = grave
+  next_tab = <Alt>t
+  layout_launcher = None
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 12
+    foreground_color = "#839496"
+    scrollback_infinite = True
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+

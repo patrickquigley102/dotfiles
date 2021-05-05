@@ -1,0 +1,1 @@
+:command Nt NERDTreeToggle

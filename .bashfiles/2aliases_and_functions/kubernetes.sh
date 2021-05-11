@@ -5,14 +5,27 @@ alias kstaging='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cl
 alias kstagings='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=staging'
 alias kstaginga='kubectl config use-context arn:aws:eks:eu-west-1:593357294110:cluster/staging && kubectl --namespace=accounts'
 
-# exec into first pod match $3 in the namespace $2 in the $1 cluster
+# exec into first pod match $3 in the namespace $2 in the $1 cluster, optional
+# container $4.
 kexec() {
   if [ "$1" == "staging" ]; then
-    kstaging --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    if [ -v ${4} ]; then
+      kstaging --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    else
+      kstaging --namespace="$2" exec -it --container $4 $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    fi
   elif [ "$1" == "gold" ]; then
-    kgold --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    if [ -v ${4} ]; then
+      kgold --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    else
+      kgold --namespace="$2" exec -it --container $4 $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    fi
   elif [ "$1" == "silver" ]; then
-    ksilver --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    if [ -v ${4} ]; then
+      ksilver --namespace="$2" exec -it $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    else
+      ksilver --namespace="$2" exec -it --container $4 $(find_first_matching_kubectl_pod $2 $3) /bin/bash
+    fi
   fi
 }
 

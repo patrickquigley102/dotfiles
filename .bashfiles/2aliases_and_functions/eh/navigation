@@ -27,5 +27,6 @@
 #\e[0;32m recs \e[0m          | cd ~/src/personalisation/recommendations
 #\e[0;32m cli \e[0m           | cd ~/.sb/dev-cli
 #\e[0;32m bashfiles \e[0m     | cd ~/.bashfiles/
-#\e[0;32m iluvatar \e[0m     | cd ~/src/jakeg/iluvatar
+#\e[0;32m iluvatar \e[0m      | cd ~/src/jakeg/iluvatar
+#\e[0;32m rds \e[0m           | cd ~/src/platform/tf-module-rds-sg
 

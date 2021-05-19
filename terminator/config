@@ -9,8 +9,8 @@
   go_down = <Alt>n
   go_left = <Alt>m
   go_right = <Alt>i
-  split_horiz = <Alt>g
-  split_vert = <Alt>d
+  split_horiz = <Alt>d
+  split_vert = <Alt>g
   move_tab_left = grave
   next_tab = <Alt>t
   broadcast_group = <Alt>w
